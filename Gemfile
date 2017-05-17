@@ -24,7 +24,7 @@ gem 'devise-i18n'
 gem 'foundation-rails'
 gem 'decent_exposure', '3.0.0'
 gem 'decent_decoration', '~> 0.1.0'
-gem 'draper', github: 'audionerd/draper', branch: 'rails5'
+gem 'draper', "~> 3.0"
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'activeadmin'
 gem 'inherited_resources', '~> 1.7'
