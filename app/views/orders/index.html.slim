@@ -1,23 +1,16 @@
-h1 Listing orders
+.row
+  .medium-12.columns
+    h3 Заказы
 
-table
-  thead
-    tr
-      th User
-      th Status
-      th
-      th
-      th
-
-  tbody
-    - @orders.each do |order|
-      tr
-        td = order.user_id
-        td = order.status
-        td = link_to 'Show', order
-        td = link_to 'Edit', edit_order_path(order)
-        td = link_to 'Destroy', order, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Order', new_order_path
+  .medium-12.columns
+    table.table
+      thead
+        th Дата создания
+        th Статус
+        th
+      tbody
+        - current_user.orders.each do |order|
+          tr
+            td = order.created_at
+            td = order.status
+td = link_to "Подробнее...", order
