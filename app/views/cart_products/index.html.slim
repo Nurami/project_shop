@@ -1,0 +1,7 @@
+.row
+  .medium-12.columns
+    h3 Корзина
+    = render collection: products, partial: "cart_products/product"
+.row
+  .medium-12.columns
+.text-center = link_to "Создать заказ", new_order_path, class: "button large"

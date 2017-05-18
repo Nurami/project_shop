@@ -1,0 +1,14 @@
+.product-cart-desc
+  .title
+    = link_to product.title, product
+  .description
+    = product.description
+  .price
+    = product.price_in_rur
+  .actions
+    = link_to "УДАЛИТЬ ИЗ КОРЗИНЫ",
+              cart_product_path(product.id),
+              method: :delete,
+              class: "button"
+  .amount
+= product.current_amount
