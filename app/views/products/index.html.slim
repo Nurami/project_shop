@@ -1,0 +1,7 @@
+.row
+  .medium-12.columns
+    - if params[:search]
+      h3
+        = "Результаты поиска '#{params[:search]}'"
+    .products
+= render products

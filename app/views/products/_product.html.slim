@@ -1,0 +1,16 @@
+.product-short-desc
+  .image
+    = image_tag "product-default"
+  .title
+    = link_to product.title, product
+  .description
+    = product.truncated_description
+  .price
+    = product.price_in_rur
+  .actions
+    - if session[:cart] && session[:cart].include?(product.id.to_s)
+      strong В корзине!
+    - else
+      = link_to "КУПИТЬ", new_cart_product_path(product_id: product.id), class: "button"
+  .amount
+= product.current_amount

@@ -1,0 +1,28 @@
+.row
+  .medium-8.medium-centered.columns
+    .product-full-desc
+      .image
+        = image_tag "product-default"
+      .title
+        = link_to product.title, product
+      .description
+        = product.description
+      .price
+        = product.price_in_rur
+      .actions
+        = link_to "КУПИТЬ", "", class: "button"
+      .amount
+        = product.current_amount
+
+
+.row
+  .medium-6.medium-centered.columns
+    = render "comments/form" if user_signed_in?
+    .comments
+      - if product.comments_exists?
+        = render product.comments
+      - else
+        p Комментариев нет
+        p
+          = link_to "Войдите", new_user_session_path
+          |, чтобы оставлять комментарии!
