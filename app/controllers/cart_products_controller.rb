@@ -12,13 +12,13 @@ class CartProductsController < ApplicationController
 
     session[:cart].uniq!
 
-    redirect_to :back
+    redirect_back(fallback_location: root_path)
   end
 
   def destroy
     session[:cart].delete(params[:id])
 
-    redirect_to :back
+    redirect_back(fallback_location: root_path)
   end
 
   private

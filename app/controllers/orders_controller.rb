@@ -11,9 +11,11 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-  def index; end
+  def index 
+  end
 
-  def show; end
+  def show 
+  end
 
   private
 

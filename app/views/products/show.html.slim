@@ -10,7 +10,7 @@
       .price
         = product.price_in_rur
       .actions
-        = link_to "КУПИТЬ", "", class: "button"
+        = link_to "КУПИТЬ", new_cart_product_path(product_id: product.id), class: "button"
       .amount
         = product.current_amount
 
@@ -24,5 +24,5 @@
       - else
         p Комментариев нет
         p
-          = link_to "Войдите", new_user_session_path
-          |, чтобы оставлять комментарии!
+          = link_to "Войдите", new_user_session_path  
+          |, чтобы оставлять комментарии! 
