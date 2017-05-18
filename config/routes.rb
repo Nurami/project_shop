@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :orders, only: [:new, :show, :index]
-  devise_for :users
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :products do
     resources :comments, shallow: true, only: [:create, :update, :destroy]
   end
