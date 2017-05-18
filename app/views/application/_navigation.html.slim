@@ -1,0 +1,20 @@
+.top-bar
+  .top-bar-left
+    ul.dropdown.menu data-dropdown-menu=true
+      li.menu-text FS Shop Engine
+      li
+        = link_to "Каталог", products_path
+      li
+        = link_to cart_products_path do
+          = "Корзина (#{ session[:cart] ? session[:cart].uniq.size : "Пусто" })"
+
+  .top-bar-right
+    ul.menu
+      li
+        = form_tag products_path, method: :get
+          = text_field_tag :search, params[:search], placeholder: "Search"
+      li
+        - if user_signed_in?
+          = link_to "Выйти", destroy_user_session_path, method: :delete
+        - else
+= link_to "Войти", new_user_session_path

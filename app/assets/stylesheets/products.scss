@@ -1,3 +1,64 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.product-description {
+  background-color: #F5F5F5;
+  display: inline-block;
+  height: auto;
+  margin: 7px;
+  padding: 10px;
+  vertical-align: top;
+
+  .image {
+    margin-bottom: 7px;
+    margin-left: 23px;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+
+  .description {
+    font-size: 12px;
+    margin-bottom: 7px;
+  }
+
+  .price {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+    margin-bottom: 7px;
+  }
+
+  .actions {
+    margin-bottom: 7px;
+    float: left;
+  }
+
+  .amount {
+    float: right;
+    font-size: 10px;
+  }
+}
+
+.product-short-desc {
+  @extend .product-description;
+
+  height: 384px;
+  width: 256px;
+}
+
+.product-full-desc {
+  @extend .product-description;
+
+  width: 100%;
+}
+
+.product-cart-desc {
+  @extend .product-description;
+
+  width: 100%;
+}

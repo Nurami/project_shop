@@ -12,4 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require comments
+ *= require products
+ *= require foundation_and_overrides
+
  */
+ .container {
+  margin-top: 7px;
+}
